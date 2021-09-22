@@ -1,4 +1,4 @@
-
+[![Build Status](https://dev.azure.com/luisbarragan2/Space%20Game%20-%20web%20-%20Release/_apis/build/status/LuisBarraganB.mslearn-tailspin-spacegame-web-deploy?branchName=main)](https://dev.azure.com/luisbarragan2/Space%20Game%20-%20web%20-%20Release/_build/latest?definitionId=5&branchName=main)
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
