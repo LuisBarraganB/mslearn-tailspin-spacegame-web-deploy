@@ -28,6 +28,22 @@ stages:
       wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
       dotnetSdkVersion: '5.x'
 
+    - task: AzurePowerShell@5
+     inputs:
+     azureSubscription: 'Azure subscription 1(d94adc9b-f935-4162-8895-859a40cba7ac)'
+     ScriptType: 'InlineScript'
+    Inline: |
+      # Id of the subscription
+      $subscriptionId = "d94adc9b-f935-4162-8895-859a40cba7ac"
+      
+      Name of the virtual machine 
+      $vMToStart = "luisVm"
+      
+      # The action on the virtual machine (Start or Stop)
+      $vmAction = "Stop"
+      
+      # Remove the virtual machine
+      Remove-AzVM -Name luisVm -ResourceGroup LB
     steps:
     - task: UseDotNet@2
       displayName: 'Use .NET SDK $(dotnetSdkVersion)'
